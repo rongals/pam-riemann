@@ -15,13 +15,23 @@ The present code relies on the following packages:
 
 Download and extract the repo, then:
 ```
-> cd pam-riemann/Debug
-> make
+$ cd pam-riemann/Debug
+$ make
 ```
 
-
+Then assuming the PAM modules are in `/lib/x86_64/security/` copy the shared obiect as
+```
+$ sudo cp libpam-riemann.so /lib/x86_64/security/pam-riemann.so
+$ sudo chown 644 /lib/x86_64/security/pam-riemann.so
+```
 
 ## Usage
+
+To enable the module add it as `requisite` in the auth section of a PAM application. As an example in the `/etc/pam.d/sshd` file add on top the following line to configuration:
+```
+auth    required        pam_riemann.so server=10.11.12.13 port=5555
+```
+where *10.11.12.13* is the IP address of the configured Riemann server.
 
 ## Credits
 pam-riemann is a creation of [Luca Simone Ronga](https://github.com/rongals) (c) 2017

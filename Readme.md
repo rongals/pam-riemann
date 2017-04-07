@@ -13,6 +13,15 @@ The present code relies on the following packages:
 
 ## Build and Install
 
+Download and extract the repo, then:
+'''
+> cd pam-riemann/Debug
+> make
+'''
+
+
+
+
 ## Usage
 
 ## Credits

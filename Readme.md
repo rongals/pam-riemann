@@ -9,3 +9,5 @@
 
 ## Usage
 
+## Credits
+pam-riemann is a creation of [Luca Simone Ronga](https://github.com/rongals) (c) 2017

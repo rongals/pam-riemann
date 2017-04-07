@@ -5,6 +5,12 @@
 
 ## Dependencies
 
+The present code relies on the following packages:
+
+* [riemann-c-client](https://github.com/algernon/riemann-c-client) by Gergely Nagy
+* libpam0g-dev PAM development
+
+
 ## Build and Install
 
 ## Usage
